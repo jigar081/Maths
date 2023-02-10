@@ -1,0 +1,39 @@
+Normal distr:
+import math
+
+def normal_prob(mu, sigma, x):
+    return 1/math.sqrt(2*math.pi*math.pow(sigma, 2)) * math.exp(-math.pow(x-mu, 2) / (2 * math.pow(sigma, 2)))
+
+mu = 0    # mean
+sigma = 1 # standard deviation
+x = 1     # the value to consider
+
+result = normal_prob(mu, sigma, x)
+
+print("The probability of x =", x, "with mean =", mu, "and standard deviation =", sigma, "is", result)
+
+exponential dist:
+import math
+
+def exponential_prob(lam, x):
+    return 1 - math.exp(-lam * x)
+
+lam = 2.5  # rate of events
+x = 2      # time interval
+
+result = exponential_prob(lam, x)
+
+print("The probability of an event happening in the first", x, "seconds with rate", lam, "per second is", result)
+
+poisson:
+import math
+
+def poisson_prob(lam, k):
+    return math.pow(lam, k) * math.exp(-lam) / math.factorial(k)
+
+lam = 2.5  # average number of events in an interval
+k = 5      # number of events to consider
+
+result = poisson_prob(lam, k)
+
+print("The probability of exactly", k, "events in an interval with average", lam, "events is", result)
