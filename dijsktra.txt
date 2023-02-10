@@ -31,4 +31,4 @@ src = 0
 
 result = dijkstra(graph, src)
 
-print("The shortest distances from the source vertex to all other vertices are:", resul
+print("The shortest distances from the source vertex to all other vertices are:", result)
